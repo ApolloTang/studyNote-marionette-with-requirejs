@@ -20,7 +20,7 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 		, itemEdit:            function(id) { /*app.EditItem.Controller.display(id); */ console.log('itemEdit fired ')}   
 	};
 	
-	app.addInitializer(function(){  /*  */
+	app.addInitializer(function(){
 		console.log( 'exec [2] application started');
 		new AppControl.Router({controller: _API	});
 	});

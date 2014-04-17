@@ -19,7 +19,6 @@ define(["marionette"], function(Marionette){
 		};
 	});
 
-	
 	//helper
 	_.extend(app, {
 		navigate: function(route, opts) { opts || (opts={}); Backbone.history.navigate(route, opts); }
