@@ -27,5 +27,7 @@ requirejs.config({
 }); // end requirejs.config
 
 require(["main"], function(app){
+
+console.log( Date.now() +  'exec [1] before  app.start()' );
   app.start();
 });

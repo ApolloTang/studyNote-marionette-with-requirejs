@@ -1,20 +1,20 @@
-define( ["app",
-           "tpl!app/collection_manager/templates/layout.tpl"
-         //, "tpl!app/collection_manager/templates/panel.tpl"
-         //, "tpl!app/collection_manager/templates/none.tpl"
-         //, "tpl!app/collection_manager/templates/list.tpl"
-         //, "tpl!app/collection_manager/templates/list_item.tpl"
+define( [	  "main"
+			//, "tpl!app/collection_manager/templates/layout.tpl"
+	         //, "tpl!app/collection_manager/templates/panel.tpl"
+	         //, "tpl!app/collection_manager/templates/none.tpl"
+	         //, "tpl!app/collection_manager/templates/list.tpl"
+	         //, "tpl!app/collection_manager/templates/list_item.tpl"
          ]
-       , function(app
-			      , layoutTpl
-			      //, panelTpl
-			      //, noneTpl
-			      //, listTpl
-			      //, listItemTpl
+       , function( 	  app
+					//, layoutTpl
+					      //, panelTpl
+					      //, noneTpl
+					      //, listTpl
+					      //, listItemTpl
 			      ){
-ContactManager.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
+app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
 
-
+/*
 		CollView.Layout = Marionette.Layout.extend({
 		   	  template: "#template-app-layout"
 		   	, regions: {
@@ -66,6 +66,6 @@ ContactManager.module("CollView", function(CollView, app, Backbone, Marionette, 
 
 
 
-
+*/
 }, null);
-return CollView;});
+return app.CollView;});
