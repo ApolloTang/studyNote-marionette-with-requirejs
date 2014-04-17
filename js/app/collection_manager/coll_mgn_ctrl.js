@@ -16,15 +16,18 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 		console.log('applicationLayout.template()', applicationLayout.template());
 		console.log('viewCtrlPanel.template()', viewCtrlPanel.template());
 		
-/*		
+		require(["app/common/view_spinner", "app/entities/collection"], function(ViewSpinner){
+			
+	
 			// ** spawn a spnner **
-			var spinnerView = new app.CommonView.Spinner({
+			var viewSpinner = new ViewSpinner({
 		        title: "Simulating data latency",
 		        message: "loading collection...."
 		      });
-			app.r1.show(spinnerView);
-*/
-		require(["app/entities/collection"], function(){
+			app.r1.show(viewSpinner);
+			
+			
+			
 			var promise_items = app.request('entities'); //  request entities
 
 		

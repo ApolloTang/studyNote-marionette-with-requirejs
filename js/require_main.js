@@ -9,9 +9,11 @@ requirejs.config({
     , text        : "libs/text"
     , tpl         : "libs/underscore-tpl"
     , underscore  : "libs/underscore"
+    , spinJQuery  : "libs/spin.jquery"
+    , spin        : "libs/spin"
   } //end path
   , shim: {
-      underscore: { exports: "_" }
+      underscore  : { exports: "_" }
     , backbone    : {
       	  deps    : ["jquery", "underscore", "json2"]
       	, exports : "Backbone"
