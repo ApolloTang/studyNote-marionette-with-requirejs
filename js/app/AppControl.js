@@ -16,11 +16,10 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 	var _API = {
 		// the following callback ask View to to things:
 		  itemsCallback: function() { /*app.CollView.Controller.display();   */ 
-		  	console.log('itemsCallback fired ');
-		  	require(["app/collection_manager/coll_mgn_ctrl"], function(coll_mgn_ctrl){
-		  		coll_mgn_ctrl.display();
-		  	});
-		  	
+			  	console.log('itemsCallback fired ');
+			  	require(["app/collection_manager/coll_mgn_ctrl"], function(coll_mgn_ctrl){
+			  		coll_mgn_ctrl.display();
+			  	});
 		  	}
 		, itemsDetailCallback: function(id) { /*app.Details.Controller.display(id);  */ console.log('itemsDetailCallback fired ')}
 		, itemEdit:            function(id) { /*app.EditItem.Controller.display(id); */ console.log('itemEdit fired ')}   

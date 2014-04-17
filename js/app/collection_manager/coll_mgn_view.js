@@ -2,18 +2,17 @@ define( [	  "main"
 			, "tpl!app/collection_manager/templates/app-layout.tpl"
 	        , "tpl!app/collection_manager/templates/app-ctrl-panel.tpl"
 	         //, "tpl!app/collection_manager/templates/none.tpl"
-	         //, "tpl!app/collection_manager/templates/list.tpl"
-	         //, "tpl!app/collection_manager/templates/list_item.tpl"
+	        , "tpl!app/collection_manager/templates/item.tpl"
+	        , "tpl!app/collection_manager/templates/items.tpl"
          ]
        , function( 	  app
 					, appLayoutTpl
 					, appCtrlPanelTpl
 					      //, noneTpl
-					      //, listTpl
-					      //, listItemTpl
+				    , itemTpl
+					, itemsTpl
 			      ){
 app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
-
 
 		CollView.Layout = Marionette.Layout.extend({
 		   	  template: appLayoutTpl
@@ -30,7 +29,7 @@ app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
 		});
 		CollView.Item  = Marionette.ItemView.extend({
 						  tagName: "tr"
-						, template: "#template-item"
+						, template: itemTpl
 						, events: {   "click": 'highLight'
 									, "click button.js-delete": 'deleteClicked'
 									, "click a.js-show": 'showClicked'
@@ -60,12 +59,9 @@ app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
 		});
 		CollView.Items = Marionette.CompositeView.extend({
 						  tagName: "table"
-						, template: "#template-items"
+						, template: itemsTpl
 						, itemView: CollView.Item
 						, itemViewcontainer: "tbody" }); 
-
-
-
 
 }, null);
 return app.CollView;});

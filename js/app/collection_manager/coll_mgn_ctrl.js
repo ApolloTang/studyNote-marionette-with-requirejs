@@ -5,16 +5,16 @@ define( [	  "main"
 					, View
 			      ){
 app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $, _){
-//CollMgnCtrl = {
+
 	
-		this.display =  function() {
-			console.log('control manager display called')
+	this.display =  function() {
+		console.log('control manager display called')
 		
-			var applicationLayout = new View.Layout();
-			var viewCtrlPanel = new View.CtrlPanel();
+		var applicationLayout = new View.Layout();
+		var viewCtrlPanel = new View.CtrlPanel();
 			
-			console.log('applicationLayout.template()', applicationLayout.template());
-			console.log('viewCtrlPanel.template()', viewCtrlPanel.template());
+		console.log('applicationLayout.template()', applicationLayout.template());
+		console.log('viewCtrlPanel.template()', viewCtrlPanel.template());
 		
 /*		
 			// ** spawn a spnner **
@@ -25,12 +25,11 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 			app.r1.show(spinnerView);
 */
 		require(["app/entities/collection"], function(){
-			debugger;
-			//var promise_items = app.request('entities'); //  request entities
-		})
-						/*		
-			var viewItems = new CollView.Items;  // spawn view for collection
+			var promise_items = app.request('entities'); //  request entities
+
+		
 			$.when(promise_items).done(function(data){
+			
 				    console.log('[4] promised passed to collection view control, here is the collection:', data);
 					viewItems.collection = data;  // spawn view for collection
 					
@@ -70,19 +69,25 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 						app.r2.show(newItemView);
 					});
 					// end viewCtrlPanel.on("item:new"
-					
-					
-					
+
 					app.r1.show(applicationLayout);
-			}); // end deffer object chain
+
+				}); 
+				// end deffer object chain
 			
+			
+		});// end require Entity
+		var viewItems = new View.Items;  // spawn view for collection			
+			
+/*			
       		var deleteItem = function(itemView, model) {
       			if (app.persisted) {
       				model.destroy();	
       			} else {
 			    	this.collection.remove(model);
 			    } 
-      		};
+      		}; 
+
       		var showItem = function(itemView, model) {
       			app.trigger('AppControl:content:itemById', model.get('id') );
       		};
@@ -106,11 +111,10 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 		    viewItems.on("itemview:item:delete", deleteItem );
 		    viewItems.on("itemview:item:show", showItem );
 		    viewItems.on("itemview:item:edit", editItem );
+*/		    
 		    
-		    
-*/
-		//}
-        // end display()	
+
+	
 };
 //end CollMgnCtrl
 

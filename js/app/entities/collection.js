@@ -1,16 +1,15 @@
 define(["main"
-		//, "app/config/storage/localstorage"
+		, "app/config/storage/localstorage_conf"
 		, 'app/entities/generate_model'
 		]
 	, function(
 		app
-		//, null
+		, storage
 		, modelAttrs
 		){
 			
 
 app.module("Entities", function(Entities, ContactManager, BB, Marionette, $, _, opts){
-			debugger;	
   	
 		Entities.Item = BB.Model.extend({ 
 			urlRoot: "items"
@@ -89,11 +88,6 @@ app.module("Entities", function(Entities, ContactManager, BB, Marionette, $, _, 
 		// handler to respond to request				
 	    app.reqres.setHandler('entities', function(){ return API.getEntities();});
 	    app.reqres.setHandler('entity', function(id){ return API.getEntity(id);});
-debugger;
-		// debug
-		window.A_EntitiesAPI = API;		
-
 
 } , {models_attr: modelAttrs }  );
-return ;
 });
