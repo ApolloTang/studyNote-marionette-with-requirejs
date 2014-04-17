@@ -1,22 +1,22 @@
 define( [	  "main"
-			//, "tpl!app/collection_manager/templates/layout.tpl"
-	         //, "tpl!app/collection_manager/templates/panel.tpl"
+			, "tpl!app/collection_manager/templates/app-layout.tpl"
+	        , "tpl!app/collection_manager/templates/app-ctrl-panel.tpl"
 	         //, "tpl!app/collection_manager/templates/none.tpl"
 	         //, "tpl!app/collection_manager/templates/list.tpl"
 	         //, "tpl!app/collection_manager/templates/list_item.tpl"
          ]
        , function( 	  app
-					//, layoutTpl
-					      //, panelTpl
+					, appLayoutTpl
+					, appCtrlPanelTpl
 					      //, noneTpl
 					      //, listTpl
 					      //, listItemTpl
 			      ){
 app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
 
-/*
+
 		CollView.Layout = Marionette.Layout.extend({
-		   	  template: "#template-app-layout"
+		   	  template: appLayoutTpl
 		   	, regions: {
 		   		// the following are nested inside #app-layout
 				RegionAppCtrlPanel: "#region-control-panel",  
@@ -25,7 +25,7 @@ app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
 	  	});
 		
 		CollView.CtrlPanel = Marionette.ItemView.extend({
-			  template: "#template-app-ctrl-panel" 
+			  template: appCtrlPanelTpl
 			  , triggers: {"click button.js-new": "item:new" } 
 		});
 		CollView.Item  = Marionette.ItemView.extend({
@@ -66,6 +66,6 @@ app.module("CollView", function(CollView, app, Backbone, Marionette, $, _){
 
 
 
-*/
+
 }, null);
 return app.CollView;});

@@ -8,10 +8,14 @@ app.module("CollCtrl", function(CollCtrl, app, Backbone, Marionette, $, _){
 CollMgnCtrl = {
 		display : function() {
 			console.log('control manager display called')
-/*			
-			var applicationLayout = new CollView.Layout();
-			var viewCtrlPanel = new CollView.CtrlPanel();
+		
+			var applicationLayout = new View.Layout();
+			var viewCtrlPanel = new View.CtrlPanel();
 			
+			console.log('applicationLayout.template()', applicationLayout.template());
+			console.log('viewCtrlPanel.template()', viewCtrlPanel.template());
+		
+			debugger;/*			
 			// ** spawn a spnner **
 			var spinnerView = new app.CommonView.Spinner({
 		        title: "Simulating data latency",
