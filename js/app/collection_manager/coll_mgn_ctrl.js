@@ -24,9 +24,11 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 		      });
 			app.r1.show(spinnerView);
 */
-		
+		require(["app/entities/collection"], function(){
+			debugger;
 			//var promise_items = app.request('entities'); //  request entities
-						debugger;/*		
+		})
+						/*		
 			var viewItems = new CollView.Items;  // spawn view for collection
 			$.when(promise_items).done(function(data){
 				    console.log('[4] promised passed to collection view control, here is the collection:', data);

@@ -18,7 +18,6 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 		  itemsCallback: function() { /*app.CollView.Controller.display();   */ 
 		  	console.log('itemsCallback fired ');
 		  	require(["app/collection_manager/coll_mgn_ctrl"], function(coll_mgn_ctrl){
-		  		debugger;
 		  		coll_mgn_ctrl.display();
 		  	});
 		  	
