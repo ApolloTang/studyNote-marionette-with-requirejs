@@ -82,7 +82,7 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 		});// end require Entity
 		var viewItems = new View.Items;  // spawn view for collection			
 			
-/*			
+			
       		var deleteItem = function(itemView, model) {
       			if (app.persisted) {
       				model.destroy();	
@@ -114,7 +114,7 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 		    viewItems.on("itemview:item:delete", deleteItem );
 		    viewItems.on("itemview:item:show", showItem );
 		    viewItems.on("itemview:item:edit", editItem );
-*/		    
+		    
 		    
 
 	
