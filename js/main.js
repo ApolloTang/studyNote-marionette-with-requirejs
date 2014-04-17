@@ -7,15 +7,24 @@ define(["marionette"], function(Marionette){
 	
 	app.persisted = true;
 	app.useLocalStorage = true;
+	
+		// start application control
+
 
 	app.on("initialize:after", function(){ 
-		console.log( 'exec [3] after initializer');
+		// [insight] this get initialized before BBM.addInitializer !!! 
+		console.log(  Date.now() + 'exec [2] app.on("initialize:after" ' );
 		if(Backbone.history){ 
-			console.log('backbone history is up');
-			Backbone.history.start(); 
-			if(app.getCurrentRoute() === ""){	
-				app.trigger('AppControl:content:items');
-			};
+			console.log('backbone history object exist, but not started');
+			require(['app/AppControl'], function(){
+				// [!] Very important start history after requred router
+				Backbone.history.start();
+				console.log('just started bb.history'); 
+				if(app.getCurrentRoute() === ""){	
+					console.log('url fragment is empty');
+					app.trigger('AppControl:content:items');
+				};
+			});
 		};
 	});
 
@@ -25,8 +34,7 @@ define(["marionette"], function(Marionette){
 		, getCurrentRoute : function(){ return Backbone.history.fragment; }
 	});
 	
-	// start application control
-	require(['app/AppControl'], function(){});
+
 		
 	return app;
 });
