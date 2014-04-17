@@ -4,9 +4,10 @@ define( [	  "main"
        , function( 	  app
 					, View
 			      ){
-app.module("CollCtrl", function(CollCtrl, app, Backbone, Marionette, $, _){
-CollMgnCtrl = {
-		display : function() {
+app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $, _){
+//CollMgnCtrl = {
+	
+		this.display =  function() {
 			console.log('control manager display called')
 		
 			var applicationLayout = new View.Layout();
@@ -15,15 +16,17 @@ CollMgnCtrl = {
 			console.log('applicationLayout.template()', applicationLayout.template());
 			console.log('viewCtrlPanel.template()', viewCtrlPanel.template());
 		
-			debugger;/*			
+/*		
 			// ** spawn a spnner **
 			var spinnerView = new app.CommonView.Spinner({
 		        title: "Simulating data latency",
 		        message: "loading collection...."
 		      });
 			app.r1.show(spinnerView);
-			
-			var promise_items = app.request('entities'); //  request entities
+*/
+		
+			//var promise_items = app.request('entities'); //  request entities
+						debugger;/*		
 			var viewItems = new CollView.Items;  // spawn view for collection
 			$.when(promise_items).done(function(data){
 				    console.log('[4] promised passed to collection view control, here is the collection:', data);
@@ -104,12 +107,12 @@ CollMgnCtrl = {
 		    
 		    
 */
-		}
+		//}
         // end display()	
 };
 //end CollMgnCtrl
 
 
 }, null);
-return CollMgnCtrl;
+return app.coll_mgn_ctrl
 });

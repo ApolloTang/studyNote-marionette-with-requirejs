@@ -17,8 +17,9 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 		// the following callback ask View to to things:
 		  itemsCallback: function() { /*app.CollView.Controller.display();   */ 
 		  	console.log('itemsCallback fired ');
-		  	require(["app/collection_manager/coll_mgn_ctrl"], function(CollMgnCtrl){
-		  		CollMgnCtrl.display();
+		  	require(["app/collection_manager/coll_mgn_ctrl"], function(coll_mgn_ctrl){
+		  		debugger;
+		  		coll_mgn_ctrl.display();
 		  	});
 		  	
 		  	}

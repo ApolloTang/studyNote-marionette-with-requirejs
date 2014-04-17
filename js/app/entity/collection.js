@@ -1,6 +1,13 @@
-define(["app", /*"app/config/storage/localstorage",*/ 'app/entity/generateModel'], function(ContactManager, null, modelAttrs){
-	
-ContactManager.module("Entities", function(Entities, ContactManager, Backbone, Marionette, $, _){
+define(["main"
+		, /*"app/config/storage/localstorage"
+		,*/ 'app/entity/generateModel'
+		]
+	, function(
+		app
+		, null
+		, modelAttrs
+		){
+app.module("Entities", function(Entities, ContactManager, Backbone, Marionette, $, _){
 /*  	
 		Entities.Item = BB.Model.extend({ 
 			urlRoot: "items"
