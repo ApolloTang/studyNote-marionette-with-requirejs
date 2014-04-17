@@ -7,9 +7,6 @@ define(["marionette"], function(Marionette){
 	
 	app.persisted = true;
 	app.useLocalStorage = true;
-	
-		// start application control
-
 
 	app.on("initialize:after", function(){ 
 		// [insight] this get initialized before BBM.addInitializer !!! 
