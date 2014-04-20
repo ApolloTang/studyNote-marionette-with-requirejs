@@ -1,9 +1,14 @@
-define(['main'
+define([  'main'
 		, "tpl!app/item_details/templates/missing.tpl"
-		, "tpl!app/item_details/templates/details.tpl"], function(app){
-app.module("Details", function( Details, app, BB, Marionette, $, _) {
-		Details.View = Marionette.ItemView.extend({
-			template: "#template-detailView"
+		, "tpl!app/item_details/templates/details.tpl"]
+	, function(
+		  app
+		, missingTpl
+		, detailTpl
+	){
+app.module("item_details_view", function( item_details_view, app, BB, Marionette, $, _) {
+		this.View_details = Marionette.ItemView.extend({
+			template: detailTpl
 			, events: {
 				"click a.js-items": 'backToItemsClick'
 			}
@@ -13,9 +18,9 @@ app.module("Details", function( Details, app, BB, Marionette, $, _) {
 			}
 			
 		});
-		Details.ViewMissing = Marionette.ItemView.extend({
-			template: "#template-detailView-missing-item"
+		this.View_missing = Marionette.ItemView.extend({
+			template: missingTpl
 		});
 });	
-return Details
+return app.item_details_view;
 });

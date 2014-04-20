@@ -21,7 +21,13 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 			  		coll_mgn_ctrl.display();
 			  	});
 		  	}
-		, itemsDetailCallback: function(id) { /*app.Details.Controller.display(id);  */ console.log('itemsDetailCallback fired ')}
+		, itemsDetailCallback: function(id) { /*app.Details.Controller.display(id);  */ 
+				console.log('itemsDetailCallback fired ');
+				require(["app/item_details/item_details_ctrl"], function(item_details_ctrl){
+					item_details_ctrl.display(id);
+				});
+				
+			}
 		, itemEdit:            function(id) { /*app.EditItem.Controller.display(id); */ console.log('itemEdit fired ')}   
 	};
 	
