@@ -2,10 +2,9 @@ define(['main'
 		, 'app/edit/edit_view']
 	, function(
 		  app
-		, View
+		, edit_view
 	){
 app.module('edit_ctrl', function(edit_ctrl, app, Backbone,Marionette, $, _){
-	debugger;
 	this.display = function(id) {
 		console.log('in edit_ctrl.js');
 		
@@ -22,7 +21,8 @@ app.module('edit_ctrl', function(edit_ctrl, app, Backbone,Marionette, $, _){
 					console.log('[edit-1] promised passed to edit view contorl, here is the item:', item);
 					var editItemView = null;
 					if ( item !== undefined ) {
-						editItemView = new View.View_edit({ model:item });
+												
+						editItemView = new edit_view.View_edit({ model:item });
 								
 						editItemView.on('form:submit', function(data){
 							if( item.save(data)) {
@@ -44,6 +44,6 @@ app.module('edit_ctrl', function(edit_ctrl, app, Backbone,Marionette, $, _){
 		
 	};// end this.display()
 	
-});
+}, edit_view);
 return app.edit_ctrl;
 });

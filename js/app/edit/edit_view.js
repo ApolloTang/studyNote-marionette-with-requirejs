@@ -1,20 +1,15 @@
 define(['main'
-		, 'app/common/edit_form/edit_form_view'
 		, "tpl!app/common/missing/templates/missing.tpl"
-		, "app/common/test"
+		, 'app/common/edit_form/edit_form_view'
 		]
 	, function(
 		 app
-		, View
 		, missingTpl
-		, test
+		, edit_form_view
 	){
-		var outside = 'outside'
-		console.log('in edit_view.js');
-debugger;
-app.module('edit_view', function(edit_view, app, Backbone, Marionette, $, _, outside){
-debugger;
-	this.View_edit = new app.View_editForm.View({
+app.module('edit_view', function(edit_view, app, Backbone, Marionette, $, _, edit_form_view){
+		debugger;
+	this.View_edit = edit_form_view.View.extend({
 			initialize: function() {
 				console.log('Edit Item View comstructor called');
 				this.title = "zzzzzzEdit item with id: " + this.model.get("id");
@@ -23,6 +18,6 @@ debugger;
 	this.View_missing = Marionette.ItemView.extend({
 			template: missingTpl
 		}); 
-}, outside);
+}, edit_form_view);
 return app.edit_view;
 });
