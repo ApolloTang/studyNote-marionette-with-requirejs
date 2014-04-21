@@ -9,9 +9,10 @@ define(['main'
 		, missingTpl
 		, test
 	){
+		var outside = 'outside'
 		console.log('in edit_view.js');
 debugger;
-app.module('edit_view', function(edit_view, app, Backbone, Marionette, $, _){
+app.module('edit_view', function(edit_view, app, Backbone, Marionette, $, _, outside){
 debugger;
 	this.View_edit = new app.View_editForm.View({
 			initialize: function() {
@@ -22,6 +23,6 @@ debugger;
 	this.View_missing = Marionette.ItemView.extend({
 			template: missingTpl
 		}); 
-});
+}, outside);
 return app.edit_view;
 });
