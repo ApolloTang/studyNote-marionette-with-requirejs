@@ -7,7 +7,7 @@ app.module("item_details_ctrl", function(item_details_ctrl, app, Backbone, Mario
 			console.log('in item_detail_ctrl');
 		
 				
-			require(["app/common/view_spinner", "app/entities/collection"], function(ViewSpinner){
+			require(["app/common/spinner/view_spinner", "app/entities/collection"], function(ViewSpinner){
 
 					// ** spawn a spnner **
 					var spinnerView = new ViewSpinner({

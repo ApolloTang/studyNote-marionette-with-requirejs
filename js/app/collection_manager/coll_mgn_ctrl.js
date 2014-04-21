@@ -16,7 +16,7 @@ app.module("coll_mgn_ctrl", function(coll_mgn_ctrl, app, Backbone, Marionette, $
 		console.log('applicationLayout.template()', applicationLayout.template());
 		console.log('viewCtrlPanel.template()', viewCtrlPanel.template());
 		
-		require(["app/common/view_spinner", "app/entities/collection"], function(ViewSpinner){
+		require(["app/common/spinner/view_spinner", "app/entities/collection"], function(ViewSpinner){
 			
 	
 			// ** spawn a spnner **

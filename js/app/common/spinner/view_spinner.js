@@ -1,5 +1,5 @@
 define([ "main"
-		 , "tpl!app/common/templates/spinner.tpl"
+		 , "tpl!app/common/spinner/templates/spinner.tpl"
 		 , "spinJQuery"
 	   ]
 	, function(	  app
