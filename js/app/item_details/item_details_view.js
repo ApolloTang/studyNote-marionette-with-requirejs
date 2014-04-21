@@ -1,5 +1,5 @@
 define([  'main'
-		, "tpl!app/item_details/templates/missing.tpl"
+		, "tpl!app/common/missing/templates/missing.tpl"
 		, "tpl!app/item_details/templates/details.tpl"]
 	, function(
 		  app

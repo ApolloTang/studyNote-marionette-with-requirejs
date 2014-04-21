@@ -28,7 +28,13 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 				});
 				
 			}
-		, itemEdit:            function(id) { /*app.EditItem.Controller.display(id); */ console.log('itemEdit fired ')}   
+		, itemEdit: function(id) { /*app.EditItem.Controller.display(id); */ 
+			console.log('itemEdit fired ');
+			require(["app/edit/edit_ctrl"], function(edit_ctrl){
+				console.log('required edit_ctrl.js')
+				edit_ctrl.display(id);
+			});
+		    }	   
 	};
 	
 	app.addInitializer(function(){
