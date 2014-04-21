@@ -8,7 +8,6 @@ define(['main'
 		, edit_form_view
 	){
 app.module('edit_view', function(edit_view, app, Backbone, Marionette, $, _, edit_form_view){
-		debugger;
 	this.View_edit = edit_form_view.View.extend({
 			initialize: function() {
 				console.log('Edit Item View comstructor called');

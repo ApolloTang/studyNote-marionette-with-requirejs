@@ -1,5 +1,6 @@
 define([  "main"
-		 , "tpl!app/common/edit_form/templates/edit_form.tpl"]
+		 , "tpl!app/common/edit_form/templates/edit_form.tpl"
+		 , "backbone.syphon"]
 	, function(    app
 				,  edit_formTpl
 	){

@@ -2,7 +2,9 @@ requirejs.config({
     baseUrl: "js"
   , paths: {
       backbone    : "libs/backbone"
+    , "backbone.syphon": "libs/backbone.syphon"
     , jquery      : "libs/jquery"
+    //"jquery-ui": "vendor/jquery-ui"
     , json2       : "libs/json2"
     , localstorage: "libs/backbone.localstorage"
     , marionette  : "libs/backbone.marionette"
@@ -22,7 +24,7 @@ requirejs.config({
         deps      : ["backbone"]
       , exports   : "Marionette"
     }
-    , "jquery-ui"  : ["jquery"]
+    //, "jquery-ui"  : ["jquery"]
     , localstorage : ["backbone"]
     , tpl          : ["text"]
   } // end shim
