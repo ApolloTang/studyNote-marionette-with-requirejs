@@ -1,5 +1,5 @@
 define(['main'],function(app){
-app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _, Opts ) {
+app.module("AppControl", function(AppControl, app, Backbone, Marionette, $, _, Opts ) {
 	
 	console.log('in application control');
 	
@@ -64,4 +64,5 @@ app.module("AppControl", function(AppControl, MyApp, Backbone, Marionette, $, _,
 	});	
 
 }, null);
+return app.AppControl
 });
